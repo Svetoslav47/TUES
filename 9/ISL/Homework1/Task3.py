@@ -9,7 +9,7 @@ def main():
     while(currency == None):
         currency = input("Chose which currency you want to convert to the other. Lev or Euro\n").lower()
 
-        if ((currency != "lev") and (currency != "euro")):
+        if((currency != "lev") and (currency != "euro")):
             print("this is not an option sorry")
             currency = None
 
@@ -21,9 +21,10 @@ def main():
     while(amount_of_money == None):
         try:
             amount_of_money = int(input("Enter the amount of money you have:"))
-            if(amount_of_money < 0):
-                print("Sorry but I cant solve your debth")
-        except:
+            if(amount_of_money <= 0):
+                amount_of_money = None
+                print("Sorry but I cant solve your debt")
+        except ValueError:
             print("This is not a number")
     
     after_converison = 0
@@ -34,7 +35,7 @@ def main():
     
     after_converison = round(after_converison, 2)
 
-    if(currency[0] == "l"):
+    if(currency == "lev"):
         print(f"This amounts to {after_converison} euro")
     else:
         print(f"This amounts to {after_converison} lev")

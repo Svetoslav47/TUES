@@ -10,7 +10,7 @@ def main():
             if(side_length <= 0):
                 side_length = None
                 print("Sorry but I have no idea how to draw squares with negative side length")
-        except:
+        except ValueError:
             print("This is not a number")
     #just to make the square more visible
     print("\n")
