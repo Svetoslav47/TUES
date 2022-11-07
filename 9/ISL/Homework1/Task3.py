@@ -13,8 +13,6 @@ def main():
             print("this is not an option sorry")
             currency = None
 
-    #we have only 2 currencies and they have 2 different first letters,
-    # so we can just use the first letter
     is_converting_from_euro = True
     if(currency == "lev"):
         is_converting_from_euro = False
