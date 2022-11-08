@@ -23,7 +23,7 @@ def main():
     while amount_of_money == None:
         try:
             amount_of_money = int(input("Enter the amount of money you have:"))
-            if (amount_of_money <= 0):
+            if amount_of_money <= 0:
                 amount_of_money = None
                 print("Sorry but I cant solve your debt")
         except ValueError:
