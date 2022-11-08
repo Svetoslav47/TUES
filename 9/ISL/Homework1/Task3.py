@@ -14,7 +14,7 @@ def main():
         if (currency != "lev") and (currency != "euro"):
             print("this is not an option sorry")
             currency = None
-
+            
     is_converting_from_euro = True
     if currency == "lev":
         is_converting_from_euro = False
