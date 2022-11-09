@@ -18,16 +18,16 @@ def main():
             shape = None
 
     if shape == "triangle":
-        (perimeter, area) = calculate_for_triangle()
+        perimeter, area = calculate_for_triangle()
 
     elif shape == "square":
-        (perimeter, area) = calculate_for_square()
+        perimeter, area = calculate_for_square()
 
     elif shape == "rectangle":
-        (perimeter, area) = calculate_for_rectangle()
+        perimeter, area = calculate_for_rectangle()
 
     else:
-        (perimeter, area) = calculate_for_circle()
+        perimeter, area = calculate_for_circle()
 
     print(f"The are of the {shape} is {area} and the perimeter is {perimeter}")
 
@@ -41,7 +41,7 @@ def calculate_for_triangle():
 
     perimeter = side_a + side_b + side_c
     area = (side_a * height) / 2
-    return (perimeter, area)
+    return perimeter, area
 
 
 def calculate_for_rectangle():
@@ -50,7 +50,7 @@ def calculate_for_rectangle():
 
     perimeter = (2 * width) + (2 * length)
     area = width * length
-    return (perimeter, area)
+    return perimeter, area
 
 
 def calculate_for_square():
@@ -58,7 +58,7 @@ def calculate_for_square():
 
     perimeter = 4 * side_length
     area = side_length ** 2
-    return (perimeter, area)
+    return perimeter, area
 
 
 def calculate_for_circle():
@@ -66,7 +66,7 @@ def calculate_for_circle():
 
     perimeter = PI * radius ** 2
     area = PI * radius * 2
-    return (perimeter, area)
+    return perimeter, area
 
 
 def input_with_catch(message_for_input,
