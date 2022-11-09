@@ -5,31 +5,28 @@
     array[j] = array[index1] - array[index2];      \
     array[index1] = array[index1] - array[index2]
 
-#define swap(a, b) \
-    a = a + b;     \
-    b = a - b;     \
-    a = a - b
+#define swap(a, b, type) \
+    type temp;           \
+    temp = a;            \
+    a = b;               \
+    b = temp;
 
-#define compare(array, i, j, operator) array[i] operator array[j]
-
-#define sort(array, size, operator)                 \
+#define sort(array, size, operator, type)           \
     for (int i = 0; i < size - 1; i++)              \
         for (int j = 0; j < size - i - 1; j++)      \
-            if (compare(array, j, j + 1, operator)) \
+            if (array[j] operator array[j + 1])     \
             {                                       \
-                swap(array[j], array[j + 1]);       \
-                \ 
-                                                 \
+                swap(array[j], array[j + 1], type); \
             }
 
 int main()
 {
-    int arr[] = {5, 7, 9, 3, 4, 2};
-    sort(arr, 6, >)
+    char arr[] = {'c', 'b', 'd', 't', 'h', 'z'};
+    sort(arr, 6, >, char)
 
         for (int i = 0; i < 6; i++)
     {
-        printf("%d, ", arr[i]);
+        printf("%c, ", arr[i]);
     }
     return 0;
 }
