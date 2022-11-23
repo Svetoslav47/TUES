@@ -1,6 +1,6 @@
-#ifndef TransformGueard
+#ifndef TransformGuard
 
-#define TransformGueard
+#define TransformGuard
 typedef struct {
     long result;
     char error[100];

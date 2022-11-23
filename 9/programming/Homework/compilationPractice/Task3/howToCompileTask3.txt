@@ -1,3 +1,0 @@
-$ gcc transform.c -c -o transform.o 
-$ gcc main.c transform.o -o main.out
-$ ./main.out          
