@@ -1,4 +1,5 @@
-#ifndef MathsGuard
-#define MathsGuard
-void factoriel(int number);
+#ifndef MATHS
+#define MATHS
+
+int factoriel(int x);
 #endif
