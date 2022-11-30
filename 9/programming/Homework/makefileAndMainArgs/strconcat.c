@@ -9,6 +9,6 @@ void main(int argc, char **argv){
         printf("one of the names is longer than 50 chars long");
     }
     if(argc == 3){
-        printf("concat is %s\n", argv[1]);
+        printf("concat is %s\n", string1);
     }
 }

@@ -2,6 +2,8 @@
 
 #define addAndRaiseToTheSecond(A, B) ((A) + (B)) * ((A) + (B))
 
-void main(){
+void main()
+{
     printf("%d", addAndRaiseToTheSecond(2, 3));
 }
+.
