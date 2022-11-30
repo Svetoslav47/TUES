@@ -8,10 +8,3 @@ void main(int argc, char **argv)
         printf("%d\n", strcmp(argv[1], argv[2]));
     }
 }
-./ main.out duma duma2 duma3
-        argc = 4 argv = [
-    "main.out",
-    "duma",
-    "duma2",
-    "duma3"
-]
