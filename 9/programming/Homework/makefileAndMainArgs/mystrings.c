@@ -41,8 +41,8 @@ int strcmp(char *string1, char *string2)
             {
                 return 1;
             }
-            return 0;
         }
+        return 0;
     }
 
     int stringOneIsLonger = string1Len > string2Len ? 1 : 0;
