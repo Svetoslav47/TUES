@@ -11,7 +11,7 @@ safemultiply.exe: safemultiply.c safeint.o safeint.h
 
 safedevide.exe: safedevide.c safeint.o safeint.h
 	gcc safedevide.c safeint.c -o safedevide.exe
-
+	
 safeint.o: safeint.c safeint.h
 	gcc -c safeint.c -o safeint.o
 
