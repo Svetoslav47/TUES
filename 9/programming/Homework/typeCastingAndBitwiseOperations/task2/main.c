@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-void switchLight(int lightNumber, char *lightsState);
-void printLightsState();
+char switchLight(int lightNumber, char lightsState);
+void printLightsState(char lightsState);
 
 void main()
 {
@@ -10,6 +10,7 @@ void main()
     while (1)
     {
         printf("Enter command: ");
+        printf("s - switch light, p - print lights state, q - quit:");
         char command = 0;
         scanf("%c", &command);
         if (command == 'q')
@@ -19,24 +20,26 @@ void main()
         else if (command == 's')
         {
             int lightNumber = 0;
-            printf("Enter light number: ");
+            printf("Enter light number(1-8): ");
             scanf("%d", &lightNumber);
-            switchLight(lightNumber, &lightsState);
+            lightsState = switchLight(lightNumber - 1, lightsState);
         }
         else if (command == 'p')
         {
-            printLightsState();
+            printLightsState(lightsState);
         }
     }
 }
 
-void switchLight(int lightNumber, char *lightsState)
+char switchLight(int lightNumber, char lightsState)
 {
-    // change the state of the bit at position lightNumber
-    // in the variable lightsState
+    return lightsState ^ (1 << lightNumber);
 }
 
-void printLightsState()
+void printLightsState(char lightsState)
 {
-    // print the state of each light
+    for (size_t i = 0; i < 8; i++)
+    {
+        printf("light %d state is %d\n", i + 1, (lightsState >> i) & 1);
+    }
 }
