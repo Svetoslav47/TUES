@@ -1,9 +1,8 @@
-
 def input_with_validation(message_for_user, type_of_input):
-    while (True):
+    while True:
         input_temp = input(message_for_user)
         # Check if input is a number
-        if (input_temp.lstrip("-").replace(".", "", 1).isdigit()):
+        if input_temp.lstrip("-").replace(".", "", 1).isdigit():
             if type_of_input == "int":
                 input_temp = int(input_temp)
             elif type_of_input == "float":
