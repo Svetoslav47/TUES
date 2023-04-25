@@ -114,7 +114,8 @@ int main()
 
             free(students);
             free(grades);
-            free(subjects) return 0;
+            free(subjects);
+            return 0;
         default:
             printf("Invalid choice.\n");
         }
