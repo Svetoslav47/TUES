@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "*.ejs": "html",
-        "quadraticroots.h": "c"
+        "quadraticroots.h": "c",
+        "queue.h": "c"
     }
 }
